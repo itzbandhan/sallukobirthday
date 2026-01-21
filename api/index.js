@@ -52,9 +52,7 @@ export default async function handler(req, res) {
                     }
 
                     // Inject Open Graph Image
-                    // Use VERCEL_URL if available for absolute path
-                    const domain = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '';
-                    const imageUrl = `${domain}/ogimg.png`;
+                    const imageUrl = "https://raw.githubusercontent.com/itzbandhan/izz/main/ogimg.png";
                     const ogImageTag = `<meta property="og:image" content="${imageUrl}" />`;
 
                     if (html.includes('<meta property="og:image"')) {
