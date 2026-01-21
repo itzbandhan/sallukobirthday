@@ -9,7 +9,7 @@ create table invitation_settings (
   venue_text text not null default 'Galyang, Syangja — Venue Name',
   subtitle text default null,
   theme_variant text default 'cute-pastel',
-  emoji text default '🥳',
+  emoji text default '🩷',
   confetti_enabled boolean default true,
   emoji_overlay_enabled boolean default true,
   open_button_text text default 'Tap to Open',

@@ -1,4 +1,5 @@
 import { twMerge } from 'tailwind-merge';
+import { Wine } from 'lucide-react';
 
 interface InvitationCardProps {
     title: string;
@@ -39,6 +40,11 @@ export const InvitationCard = ({
                 {title}
             </h1>
 
+            {/* Decorative Wine Glass */}
+            <div className="text-red-800 drop-shadow-sm animate-bounce duration-[2000ms]">
+                <Wine size={32} fill="#722F37" strokeWidth={1.5} />
+            </div>
+
             {/* Subtitle */}
             {subtitle && (
                 <p className="text-sm text-brand-text/80 uppercase tracking-widest font-semibold">
@@ -49,15 +55,21 @@ export const InvitationCard = ({
             <div className="w-full h-px bg-brand-pink/30 my-2"></div>
 
             {/* Details */}
-            <div className="space-y-2 text-brand-text">
+            <div className="space-y-4 text-brand-text">
                 <div className="flex flex-col">
                     <span className="text-xs uppercase text-brand-dark font-bold tracking-wider">When</span>
                     <span className="font-serif text-lg">{date}</span>
                 </div>
 
-                <div className="flex flex-col pt-2">
+                <div className="flex flex-col">
                     <span className="text-xs uppercase text-brand-dark font-bold tracking-wider">Where</span>
                     <span className="font-serif text-lg">{venue}</span>
+                </div>
+
+                {/* Theme Section */}
+                <div className="flex flex-col">
+                    <span className="text-xs uppercase text-brand-dark font-bold tracking-wider">Theme</span>
+                    <span className="font-serif text-lg italic text-pink-600">Red Dress</span>
                 </div>
             </div>
 
@@ -70,7 +82,7 @@ export const InvitationCard = ({
 
             {/* Footer decoration */}
             <div className="pt-2 opacity-50">
-                ❤️
+                💕
             </div>
         </div>
     );

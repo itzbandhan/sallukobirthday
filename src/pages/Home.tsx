@@ -121,7 +121,7 @@ export default function Home() {
 
             {/* Overlays */}
             <EmojiOverlay
-                emoji={settings?.emoji || "🥳"}
+                emoji={settings?.emoji === "🥳" ? "🩷" : (settings?.emoji || "🩷")}
                 show={showEmoji}
                 onComplete={() => setShowEmoji(false)}
             />
