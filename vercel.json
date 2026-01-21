@@ -1,5 +1,26 @@
 {
+    "functions": {
+        "api/index.js": {
+            "includeFiles": "dist/**"
+        }
+    },
     "rewrites": [
+        {
+            "source": "/assets/(.*)",
+            "destination": "/assets/$1"
+        },
+        {
+            "source": "/vite.svg",
+            "destination": "/vite.svg"
+        },
+        {
+            "source": "/admin",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/([^/\\.]+)",
+            "destination": "/api/index?slug=$1"
+        },
         {
             "source": "/(.*)",
             "destination": "/index.html"
